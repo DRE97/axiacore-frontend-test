@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/fjb0fiq.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                fontFamily: {
+                    'poppins': ['Poppins', 'sans-serif'] 
+                }
+            }
+          }
+        }
+    </script>
+    <title>Frontend Test</title>
+</head>
+<body class="font-poppins">
+
+    <header id="navbar"></header>
+
+    <h1 class="w-full text-center text-4xl mt-12 mb-6 font-semibold">Cervezas</h1>
+
+    <div id="productsContainer" class="w-full mx-auto gap-3.5 px-2 md:px-12 grid grid-cols-2 md:grid-cols-4"></div>
+    
+    <div class="fixed bottom-0 w-full h-9 flex justify-center bg-transparent">
+        <button
+            id="open-filter-btn"
+            class="w-28 h-full flex justify-center items-center gap-x-2 bg-indigo-700 shadow-md mx-auto text-center text-white text-sm font-bold rounded uppercase"
+        >
+            filtrar
+            <img src="./svg/filters.svg" class="h-5 w-5" alt="filters">
+        </button>
+    </div>
+
+    <!--Overlay Effect-->
+    <div id="overlay" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"></div>
+    
+    <div id="filter-modal" class="fixed hidden bottom-0 mx-auto pt-5 border w-full shadow-lg rounded-md bg-white"></div>
+
+    <section id="continue-section" class="h-20 w-11/12 md:w-1/2 lg:w-1/2 mx-4 md:mx-12 px-5 py-4 border rounded my-12"></section>
+
+    <section id="help-section" class="w-full h-52 flex flex-col justify-center items-center bg-stone-900"></section>
+
+    <footer id="footer" class="w-full flex flex-col justify-between mt-11 mb-9 uppercase"></footer>
+
+    <hr class="w-full h-12 bg-stone-900">
+
+    <script src="app.js"></script>
+</body>
+</html>
